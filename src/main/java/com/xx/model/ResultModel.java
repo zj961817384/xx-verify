@@ -6,7 +6,7 @@ public class ResultModel {
 
     private int code;
 
-    private String data;
+    private Object data;
 
     private String message;
 
@@ -15,7 +15,7 @@ public class ResultModel {
 
         resultModel.setCode(200);
         resultModel.setMessage("SUCCESS");
-        resultModel.setData(JSON.toJSONString(object));
+        resultModel.setData(object);
 
         return resultModel;
     }
@@ -38,11 +38,11 @@ public class ResultModel {
         this.code = code;
     }
 
-    public String getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Object data) {
         this.data = data;
     }
 
